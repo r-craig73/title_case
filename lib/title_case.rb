@@ -1,13 +1,13 @@
 
 def title_case(title)
-  title_array = title.chars()
-  title_array.first.capitalize!()
-  # x = 0
-  # while (x < title.length())
-  #   x = x + 1
-  #   title_array.push
-  #
-  # title.
-  title_array
-
+  title_array = title.split(" ")
+  # title.capitalize!()
+  title_array.each do |array_element|
+    if (array_element == "the") | (array_element == "and")
+      array_element
+    else
+    array_element.capitalize!()
+    end
+  end
+  title_array.join(" ")
 end
