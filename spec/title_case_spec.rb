@@ -24,9 +24,9 @@ describe('#title_case') do
     expect(title_case('the color purple but blue')).to(eq('The Color Purple but Blue'))
     expect(title_case('the color purple for mary')).to(eq('The Color Purple for Mary'))
   end
-  # it('capitalize multiple words but ignore prepositions less then 5 letters') do
-  #   expect(title_case('the color purple at main)).to(eq('The Color Purple at Main'))
-  #   expect(title_case('the color purple from mary)).to(eq('The Color Purple from Mary'))
-  #   expect(title_case('the color purple by joe)).to(eq('The Color Purple by Joe'))
-  # end
+  it('capitalize multiple words but ignore prepositions less then 5 letters') do
+    expect(title_case('the color purple at main')).to(eq('The Color Purple at Main'))
+    expect(title_case('the color purple from mary')).to(eq('The Color Purple from Mary'))
+    expect(title_case('the color purple by joe')).to(eq('The Color Purple by Joe'))
+  end
 end
