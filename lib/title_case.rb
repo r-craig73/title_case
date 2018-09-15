@@ -1,6 +1,11 @@
+require('pry')
 
 def title_case(title)
-  title.capitalize!
+  split_sentence = title.split
+  split_sentence.each do |word|
+    word.capitalize!
+  end
+  split_sentence.join(' ')
   # title_array = title.split(' ')
   # first_word = title_array.shift()
   # capital_first_word = first_word.capitalize!()
