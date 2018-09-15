@@ -3,17 +3,26 @@ require('pry')
 def title_case(title)
   split_sentence = title.split
   if split_sentence.length == 1
+    one_word = split_sentence.shift
+    one_word.capitalize!
+  else
+    # capitalize first word
     first_word = split_sentence.shift
     first_word.capitalize!
-  else
+    # capitalize last word
+    last_word = split_sentence.pop
+    last_word.capitalize!
+    # then loop from the 2nd word to the next to last letter
     split_sentence.each do |word|
-      if (word == 'or') | (word == 'and')
+      if (word == 'an') | (word == 'the') | (word == 'a')
+        word
+      elsif (word == 'and') | (word == 'but') | (word == 'for')
         word
       else
         word.capitalize!
       end
     end
-    split_sentence.join(' ')
+    first_word + ' ' + split_sentence.join(' ') + ' ' + last_word
   end
 end
   # title_array = title.split(' ')
