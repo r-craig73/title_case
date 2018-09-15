@@ -7,7 +7,7 @@ def title_case(title)
     first_word.capitalize!
   else
     split_sentence.each do |word|
-      if word == 'or'
+      if (word == 'or') | (word == 'and')
         word
       else
         word.capitalize!
