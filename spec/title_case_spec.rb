@@ -9,9 +9,9 @@ describe('#title_case') do
   it('capitalizes the first letter of all words in a multiple word title') do
     expect(title_case('the color purple')).to(eq('The Color Purple'))
   end
-  # it('capitalizes multiple words and ignores "or"') do
-  #   expect(title_case('apple or sauce')).to(eq('Apple or Sauce'))
-  # end
+  it('capitalizes multiple words but ignores "or"') do
+    expect(title_case('the color purple or green')).to(eq('The Color Purple or Green'))
+  end
   # it('capitalizes multiple words and ignores "or" & "and"') do
   #   expect(title_case('apple or and sauce')).to(eq('Apple or and Sauce'))
   # end
