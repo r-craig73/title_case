@@ -1,9 +1,10 @@
 require('rspec')
+require('pry')
 require('title_case')
 
 describe('#title_case') do
   it('capitalizes the first letter of a word') do
-    expect(title_case('apple')).to(eq('Apple'))
+    expect(title_case('purple')).to(eq('Purple'))
   end
   it('capitalizes the first letter of all words in a multiple word title') do
     expect(title_case('the color purple')).to(eq('The Color Purple'))
