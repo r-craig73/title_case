@@ -5,7 +5,7 @@
 #### By Ron Craig (https://github.com/r-craig73) & Anna Marie Cooper (https://github.com/rogueminx)
 
 ## Description
-#### An Epicodus lesson 02/05/2018: Practice Title case using BDD, create a Ruby method on the `String` class that takes a string of word(s) from the user and returns the string of word(s) in title case.
+#### An Epicodus lesson 02/05/2018: Practice Title case using BDD, create a Ruby method on the `String` class that takes a string of word(s) from the user and returns the string of word(s) in title case.  There is no input interaction.  The purpose is to practice BDD principles.
 
 #### Title Case Specs
 1. The method capitalizes the first letter if there's only one word.
@@ -27,6 +27,8 @@
   * example input: "the color purple at main".title_case
   * example output: "The Color Purple at Main"
 
+### Rspec results
+![alt-text](/img/rspec-results.png "Rspec results, 6 specs passing")
 
 ## Setup/Installation Requirements
 ### Clone repository.
@@ -34,6 +36,7 @@
 * `$ gem install rspec`
 * `$ gem install pry`
 * `$ bundle install`
+
 ### Run rspec in the terminal's home directory path
 * `title_case $ rspec`
 
